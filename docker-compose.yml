@@ -1,0 +1,21 @@
+version: '3'
+
+networks:
+  local_nw:
+    external: true
+
+services:
+  croute-lite:
+    container_name: "croute-lite"
+    hostname: "croute-lite"
+    build: .
+    image: "croute-lite:latest"
+    ports:
+      - 80:80
+      - 443:443
+      - 8000:8000
+    volumes:
+      - /data/db/croute-lite:/data/db
+    networks:
+      - local_nw
+    restart: always
