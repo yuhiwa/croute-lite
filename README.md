@@ -32,13 +32,13 @@
 
 ### Add proxy setting 
 
-- add proxy setting with domain and container by get parameter 
+- add proxy setting to domain and container with get parameter 
 ```
 # curl "http://localhost:8000/add?domain=test.com&container=test"
 ```
 
-### Add proxy setting 
-- delete proxy setting
+### Delete proxy setting 
+- delete proxy setting with domain
 ```
 # curl "http://localhost:8000/delete?domain=test.com"
 ```
@@ -48,7 +48,7 @@
 ```
 # curl "http://localhost:8000/show_all"
 ```
-- specific domain
+- with specific domain
 ```
 # curl "http://localhost:8000/show?domain=test.com"
 ```
