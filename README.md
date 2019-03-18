@@ -1,6 +1,7 @@
 # croute-lite(container routing proxy lite)
 
 - Docker container proxy, just for development environments.
+- nginx and lua (openresty) and sqlite3
 
 
 ## How to use
@@ -27,5 +28,28 @@
   - test(domain) -> test(container)
 ```
 # curl -H 'Host: test' http://localhost/
+```
+
+### Add proxy setting 
+
+- add proxy setting with domain and container by get parameter 
+```
+# curl "http://localhost:8000/add?domain=test.com&container=test"
+```
+
+### Add proxy setting 
+- delete proxy setting
+```
+# curl "http://localhost:8000/delete?domain=test.com"
+```
+
+### Show domain setting
+- all 
+```
+# curl "http://localhost:8000/show_all"
+```
+- specific domain
+```
+# curl "http://localhost:8000/show?domain=test.com"
 ```
 
