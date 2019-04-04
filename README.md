@@ -11,7 +11,7 @@
 - Create network in Docker
 
 ```
-# docker create network local_nw
+# docker network create local_nw
 ```
 
 ### Container start
